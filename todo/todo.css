@@ -43,7 +43,7 @@ h1{
     max-width: 452px;
     min-width: 200px;
     overflow: hidden;
-    height: 66px;
+    height: 63px;
     border-radius: 40px;
 }
 .colorPicker{
@@ -54,6 +54,34 @@ h1{
     width: 200px;
     height: 86px;
     cursor: pointer;
+    -webkit-appearance: none
+}
+.datePicker{
+    position: absolute;
+    top: 47px;
+    left: 10px;
+    left: 50%;
+    transform: translateX(-30%);
+    border: 0;
+}
+.dateTodo{
+    position: absolute;
+    top: 49px;
+    left: 50%;
+    font-size: 11px;
+    transform: translateX(-50%);
+}
+::-webkit-datetime-edit { padding: 0; }
+::-webkit-datetime-edit-fields-wrapper { background: transparent; }
+::-webkit-datetime-edit-text { padding: 0; }
+::-webkit-inner-spin-button { display: none;}
+::-webkit-calendar-picker-indicator { margin: 0 0 0 -33px ;display: block; padding: 5px; cursor: pointer; background: transparent; }
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+    border: none;
 }
 .todos{
     max-width: 420px;
@@ -115,7 +143,11 @@ h1{
 }
 .text{
     font-size: 1.2rem;
+    position: absolute;
+    left: 50%;
     transition: 0.2s;
+    top: 17px;
+    transform: translateX(-50%);
     font-weight: bold;
 }
 .todoColorLeft, .todoColorRight{

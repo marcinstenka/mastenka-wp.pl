@@ -1,6 +1,7 @@
 const list = document.querySelector('.todos');
 const input = document.querySelector('input');
 const colorPicker = document.querySelector('.colorPicker');
+const datePicker = document.querySelector('.datePicker');
 
 const CHECK = 'fa-check-circle';
 const UNCHECK = 'fa-circle';
@@ -14,11 +15,11 @@ let id;
 // get item form local storage
 loadList = array => {
     array.forEach(item => {
-        addTodo(item.name, item.id, item.done, item.trash, item.color)
+        addTodo(item.name, item.id, item.done, item.trash, item.color, item.date)
     })
 }
 // add todo
-addTodo = (todo, id, done, trash, color) => {
+addTodo = (todo, id, done, trash, color, date) => {
     if(trash){ return; }
     const DONE = done ? CHECK : UNCHECK;
     const LINE = done ? LINE_THROUGH : NORMAL;
@@ -52,6 +53,13 @@ addTodo = (todo, id, done, trash, color) => {
     colorRight.classList.add('todoColorRight');
     colorRight.style.background = color;
     item.appendChild(colorRight)
+
+    const dateTodo = document.createElement('p');
+    dateTodo.classList.add('dateTodo');
+    dateTodo.style.color = color;
+    dateTodo.innerHTML = `deadline: ${date}`;
+    item.appendChild(dateTodo);
+
     const position = 'beforeend';
     list.insertAdjacentElement(position, item);
 }
@@ -66,19 +74,22 @@ if(data){
     id = 0;
 }
 //add an item on enter with color change
+datePicker.addEventListener("change", function(e){
+    date = e.target.value
     colorPicker.addEventListener("change", function(e){
         todoColor = e.target.value
         document.addEventListener('keyup', e => {
             if(event.keyCode == 13){
                 const toDo = input.value;
                 if(toDo){
-                    addTodo(toDo, id, false, false, todoColor);
+                    addTodo(toDo, id, false, false, todoColor, date);
                     todoList.push({
                         name: toDo,
                         id,
                         done: false,
                         trash: false,
-                        color: todoColor
+                        color: todoColor,
+                        date: date
                     })
                     //add item to local storage (this must be everywhere where todoList is uptdated)
                     localStorage.setItem('TODO', JSON.stringify(todoList));
@@ -88,19 +99,22 @@ if(data){
             }
         })
     })
+})
 // add an item on enter withhout changing default color of color picker
+    document.getElementById('datePicker').valueAsDate = new Date();
     let todoColor = colorPicker.value
     document.addEventListener('keyup', e => {
         if(event.keyCode == 13){
             const toDo = input.value;
             if(toDo){
-                addTodo(toDo, id, false, false, todoColor);
+                addTodo(toDo, id, false, false, todoColor, date);
                 todoList.push({
                     name: toDo,
                     id,
                     done: false,
                     trash: false,
-                    color: todoColor
+                    color: todoColor,
+                    date: date
                 })
                 //add item to local storage (this must be everywhere where todoList is uptdated)
                 localStorage.setItem('TODO', JSON.stringify(todoList));

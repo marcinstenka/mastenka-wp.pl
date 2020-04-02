@@ -59,10 +59,11 @@ h1{
 .datePicker{
     position: absolute;
     top: 47px;
-    left: 10px;
     left: 50%;
     transform: translateX(-30%);
+    background: transparent;
     border: 0;
+    width: 100px;
 }
 .dateTodo{
     position: absolute;
@@ -75,7 +76,13 @@ h1{
 ::-webkit-datetime-edit-fields-wrapper { background: transparent; }
 ::-webkit-datetime-edit-text { padding: 0; }
 ::-webkit-inner-spin-button { display: none;}
-::-webkit-calendar-picker-indicator { margin: 0 0 0 -33px ;display: block; padding: 5px; cursor: pointer; background: transparent; }
+::-webkit-calendar-picker-indicator {
+    margin: 0 0 0 -50px;
+    display: block;
+    padding: 5px;
+    cursor:pointer;
+    background: transparent;
+}
 
 input[type="color"]::-webkit-color-swatch-wrapper {
     padding: 0;
@@ -179,16 +186,15 @@ input[type="color"]::-webkit-color-swatch {
 .clock,
 .date {
     color: white;
-    font-size: 50px;
+    font-size: 33px;
+    top: 10px;
     position: absolute;
 }
 
 .clock {
-    top: 0;
     left: 10px;
 }
 
 .date {
-    top: 0;
     right: 10px;
 }

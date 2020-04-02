@@ -17,11 +17,11 @@ body {
     justify-content: center;
     margin-top: 25px;
     font-size: 60px;
-    color: #d8d8d8;
+    color: white;
 }
 
 .logo logoColor {
-    color: #EFA73A;
+    color: rgb(227, 82, 188);
 }
 
 .logo logoColor:first-of-type {
@@ -34,7 +34,7 @@ body {
 
 .clock,
 .date {
-    color: #d8d8d8;
+    color: white;
     font-size: 57px;
     position: absolute;
 }
@@ -120,73 +120,74 @@ body {
 }
 
 .tile1 {
-    background: rgb(82, 182, 213);
+    background: #FF00FF;
 }
 
 .tile2 {
-    background: rgb(229, 70, 70);
+    background: 	rgb(148,0,211);
 }
 
 .tile3 {
-    background: rgb(0, 0, 0);
+    background: rgb(238,130,238);
 }
 
 .tile4 {
-    background: rgb(255, 0, 0);
+    background: rgb(253,181,200);
 }
 
 .tile5 {
-    background: rgb(18, 49, 175);
+    background: rgb(128,0,128);
 }
 
 .tile6 {
-    background: rgb(111, 158, 50);
+    background: rgb(218,112,214);
 }
 
 .tile7 {
-    background: rgb(227, 127, 27);
+    background: rgb(255,105,180);
 }
 
 .tile8 {
-    background: rgb(59, 89, 152);
+    background: rgb(153,50,204);
 }
 
 .tile9 {
-    background: rgb(63, 201, 72);
+    background: rgb(138,43,226);
 }
 
 .tile10 {
-    background: rgb(173, 163, 22);
+    background: rgb(75,0,130);
 }
 
 .tile11 {
-    background: rgb(187, 84, 238);
+    background: rgb(179, 62, 148);
 }
 
 .tile12 {
-    background: rgb(255, 90, 0);
+    background: rgb(147,112,219);
 }
 
 .tile13 {
-    background: rgb(0, 0, 0);
+    background: rgb(255,20,147);
 }
 
 .tile14 {
-    background: rgb(181, 35, 35);
+    background: rgb(221,160,221)
+    ;
 }
 
 .tile15 {
-    background: rgb(58, 161, 230);
+    background: rgb(139,0,139);
 }
 
 .tile16 {
-    background: rgb(0, 0, 0);
+    background: rgb(219,112,147);
 }
 
 .tile a,
 .studyTile a,
 .backArrow a {
-    color: #d8d8d8;
+    color: white;
     text-align: center;
     text-decoration: none;
     font-size: 30px;
@@ -212,52 +213,23 @@ body {
     font-size: 20px !important;
 }
 
-.studyTile {
-    position: relative;
-    width: 350px;
-    height: 500px;
-    margin: 25px;
-    border-radius: 30px;
-}
 
-.studyTile1 {
-    background: rgb(21, 149, 197);
-}
-
-.studyTile2 {
-    background: rgb(245, 106, 106);
-}
-
-.studyTile3 {
-    background: rgb(48, 175, 61);
-}
-
-.backArrow {
-    position: absolute;
-    top: 200px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 200px;
-    height: 50px;
-    background: #EFA73A;
-    border-radius: 30px;
-}
 .link{
     position: absolute;
     right: 0;
     top: 50%;
-    background: #EFA73A;
+    background: rgb(227, 82, 188);
     padding: 7px;
     font-size: 20px;
     transition: 0.2s;
 }
 .link a{
     text-decoration: none;
-    color: #d8d8d8;
+    color: white;
 
 }
 .footer {
-    color: #d8d8d8;
+    color: white;
 }
 
 @media only screen and (max-width: 1400px) {

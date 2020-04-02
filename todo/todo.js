@@ -102,6 +102,7 @@ datePicker.addEventListener("change", function(e){
 })
 // add an item on enter withhout changing default color of color picker
     document.getElementById('datePicker').valueAsDate = new Date();
+    let date = datePicker.value
     let todoColor = colorPicker.value
     document.addEventListener('keyup', e => {
         if(event.keyCode == 13){

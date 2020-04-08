@@ -100,13 +100,40 @@ datePicker.addEventListener("change", function(e){
         })
     })
 })
+
+    colorPicker.addEventListener("change", function(e){
+        todoColor = e.target.value
+        datePicker.addEventListener("change", function(e){
+        date = e.target.value
+        document.addEventListener('keyup', e => {
+            if(event.keyCode == 13){
+                const toDo = input.value;
+                if(toDo){
+                    addTodo(toDo, id, false, false, todoColor, date);
+                    todoList.push({
+                        name: toDo,
+                        id,
+                        done: false,
+                        trash: false,
+                        color: todoColor,
+                        date: date
+                    })
+                    //add item to local storage (this must be everywhere where todoList is uptdated)
+                    localStorage.setItem('TODO', JSON.stringify(todoList));
+                    id++;
+                }
+                input.value = '';
+            }
+        })
+    })
+})
 // add an item on enter withhout changing default color of color picker
 document.getElementById('datePicker').valueAsDate = new Date();
-    let date = datePicker.value
+
     let todoColor = colorPicker.value
     document.addEventListener('keyup', e => {
         if(event.keyCode == 13){
-
+            let date = datePicker.value
             const toDo = input.value;
             if(toDo){
                 addTodo(toDo, id, false, false, todoColor, date);

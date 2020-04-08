@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Stenkowa Strona 1.1</title>
+    <title>Stenkowa Strona 1.2</title>
 
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <link rel="icon" type="image/png" sizes="16x16" href="img/beetle_icon.png">
@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
 
-    <script src="main.js"></script>
 </head>
 
 <body onload="main();">
@@ -22,125 +21,146 @@
         <div class="date" id="date"></div>
         <div class="logo">
             <logoColor>Stenkowa </logoColor> Strona
-            <logoColor> 1</logoColor>.
-            <logoColor>1</logoColor>
+            <logoColor>1</logoColor>.<logoColor>2</logoColor>
         </div>
         <div class="tilesContainer">
 
             <div class="tile tile1">
-                <a href="https://translate.google.pl/?hl=pl">
+                <a class='tile__link' href="https://translate.google.pl/?hl=pl">
                     <span>Tłumacz</span>
                     <i class="fas fa-language"></i>
                 </a>
             </div>
             <div class="tile tile2">
-                <a href="https://profil.wp.pl/login.html?zaloguj=poczta">
+                <a class='tile__link' href="https://profil.wp.pl/login.html?zaloguj=poczta">
                     <span>WP</span>
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
 
             <div class="tile tile3">
-                <a href="https://github.com/marcinstenka">
+                <a class='tile__link' href="https://github.com/marcinstenka">
                     <span>Github</span>
                     <i class="fab fa-github"></i>
                 </a>
             </div>
 
             <div class="tile tile4">
-                <a href="https://www.youtube.com/">
+                <a class='tile__link' href="https://www.youtube.com/">
                     <span>YouTube</span>
                     <i class="fab fa-youtube"></i>
                 </a>
             </div>
 
             <div class="tile tile5">
-                <a href="https://pogoda.interia.pl/prognoza-dlugoterminowa-gdansk,cId,8048">
+                <a class='tile__link' href="https://pogoda.interia.pl/prognoza-dlugoterminowa-gdansk,cId,8048">
                     <span>Pogoda</span>
                     <i class="fas fa-sun"></i>
                 </a>
             </div>
             <div class="tile tile6">
-                <a href="study.html">
-                    <span>Nauka</span>
-                    <i class="fas fa-book"></i>
-                </a>
+                    <i class="fas fa-book specialCase"></i>
+                    <div class="additionalTile">
+                        <div class="additionalTile__tile additionalTile__tile1">
+                                <a href="http://jkluczewski.zsl.gda.pl/main.php">
+                                    <span>Kluczewski</span>
+                                    <i class="far fa-hdd"></i>
+                                </a>
+                        </div>
+                        <div class="additionalTile__tile additionalTile__tile2">
+                                <a href="https://adfs.edu.gdansk.pl/adfs/ls/?wa=wsignin1.0&wtrealm=https%3a%2f%2faplikacje.edu.gdansk.pl%3a443%2f&wctx=rm%3d0%26id%3dpassive%26ru%3d%252f&wct=2019-05-29T17%3a00%3a25Z">
+                                    <span>GPE</span>
+                                    <i class="fas fa-school"></i>
+                                </a>
+                        </div>
+                        <div class="additionalTile__tile additionalTile__tile3">
+                                <a href="http://isobczak.zsl.gda.pl/">
+                                    <span>Sobczak</span>
+                                    <i class="fab fa-windows"></i>
+                                </a>
+                        </div>
+                    </div>
+
             </div>
 
             <div class="tile tile7">
-                <a href="https://www.ebeactive.pl/">
+                <a class='tile__link' href="https://www.ebeactive.pl/">
                     <span>Siłownia</span>
                     <i class="fas fa-dumbbell"></i>
                 </a>
             </div>
 
             <div class="tile tile8">
-                <a href="https://www.facebook.com/">
+                <a class='tile__link' href="https://www.facebook.com/">
                     <span>Facebook</span>
                     <i class="fab fa-facebook-f"></i>
                 </a>
             </div>
 
             <div class="tile tile9">
-                <a href="https://kino.trojmiasto.pl/">
+                <a class='tile__link' href="https://kino.trojmiasto.pl/">
                     <span>Kino</span>
                     <i class="fas fa-film"></i>
                 </a>
             </div>
 
             <div class="tile tile10">
-                <a href="https://ztm.gda.pl/rozklady/linia-116.html">
+                <a class='tile__link' href="https://ztm.gda.pl/rozklady/linia-116.html">
                     <span>ZTM</span>
                     <i class="fas fa-bus"></i>
                 </a>
             </div>
 
             <div class="tile tile11">
-                <a href="https://poinformowani.pl/">
+                <a class='tile__link' href="https://poinformowani.pl/">
                     <span>KiKŚ</span>
                     <i class="far fa-newspaper"></i>
                 </a>
             </div>
 
             <div class="tile tile12">
-                <a href="https://allegro.pl/">
+                <a class='tile__link' href="https://allegro.pl/">
                     <span>Allegro</span>
                     <i class="fas fa-shopping-cart"></i>
                 </a>
             </div>
 
             <div class="tile tile13">
-                <a href="https://hbogo.pl/">
+                <a class='tile__link' href="https://hbogo.pl/">
                     <span>HBO GO</span>
                     <i class="fas fa-video"></i>
                 </a>
             </div>
 
             <div class="tile tile14">
-                <a href="https://www.totalsportek.com/category/football/">
+                <a class='tile__link' href="https://www.totalsportek.com/category/football/">
                     <span>Mecze</span>
                     <i class="fas fa-futbol"></i>
                 </a>
             </div>
 
             <div class="tile tile15">
-                <a href="https://www.messenger.com/">
+                <a class='tile__link' href="https://www.messenger.com/">
                     <span>Messenger</span>
                     <i class="fab fa-facebook-messenger"></i>
                 </a>
             </div>
 
             <div class="tile tile16">
-                <a href="https://www.netflix.com/pl/login">
+                <a class='tile__link' href="https://www.netflix.com/pl/login">
                     <span>Netflix</span>
                     <i class="fas fa-couch"></i>
                 </a>
             </div>
-            <div class="link"><a href="todo/todo.html">todo</a></div>
-            <div class="footer">2019 &copy; Wszelkie prawa zastrzeżone </div>
+            
 
         </div>
+        <div class="link"><a href="todo/todo.html">todo</a></div>
+            <div class="footer">2019 &copy; Wszelkie prawa zastrzeżone </div>
     </div>
+    <script src="test.js"></script>
+    <script src="main.js"></script>
+
 </body>
 
 </html>

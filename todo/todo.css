@@ -69,6 +69,7 @@ h1{
     left: 50%;
     transform: translateX(-30%);
     border: 0;
+    font-weight: bold;
 }
 .dateTodo{
     position: absolute;

@@ -76,6 +76,7 @@ h1{
     left: 50%;
     font-size: 11px;
     transform: translateX(-50%);
+    font-weight: bold;
 }
 ::-webkit-datetime-edit { padding: 0; }
 ::-webkit-datetime-edit-fields-wrapper { background: transparent; }

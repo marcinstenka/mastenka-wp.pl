@@ -185,29 +185,23 @@ input[type="color"]::-webkit-color-swatch {
     text-decoration: none;
     color: var(--font);
 }
-.clock,
-.date {
-    color: var(--font);
-    font-size: 50px;
+.clock, .date{
     position: absolute;
+    top: 10px;
+    font-size: 55px;
+    color: var(--font)
 }
-
-.clock {
-    top: 0;
+.clock{
     left: 10px;
 }
-
-.date {
-    top: 0;
+.date{
     right: 10px;
 }
-@media only screen and (max-width: 1000px) {
-    .clock, .date {
-        font-size: 40px;
+@media only screen and (max-width: 1400px), (max-height: 845px) {
+    .logo{
+        font-size: 45px
     }
-}
-@media only screen and (max-width: 750px) {
-    .clock, .date {
+    .date, .clock{
         font-size: 30px;
     }
 }

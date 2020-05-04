@@ -79,7 +79,7 @@ datePicker.addEventListener("change", function(e){
     colorPicker.addEventListener("change", function(e){
         todoColor = e.target.value
         document.addEventListener('keyup', e => {
-            if(event.keyCode == 13){
+            if(e.keyCode == 13){
                 const toDo = input.value;
                 if(toDo){
                     addTodo(toDo, id, false, false, todoColor, date);
@@ -132,7 +132,7 @@ document.getElementById('datePicker').valueAsDate = new Date();
 
     let todoColor = colorPicker.value
     document.addEventListener('keyup', e => {
-        if(event.keyCode == 13){
+        if(e.keyCode == 13){
             let date = datePicker.value
             const toDo = input.value;
             if(toDo){

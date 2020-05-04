@@ -3,12 +3,19 @@
     padding: 0;
     font-family: 'Lato', sans-serif;
 }
+:root {
+    --bg: #272626;
+    --font: #ffffff;
+    --font-featured: rgb(227, 82, 188);
+    --done: green;
+    --trash: red;
+}
 input:focus{
     outline: none;
 }
 ::selection{
-    background: rgb(255,182,193);
-    color: white !important;
+    background: #272626;
+    color: var(--font);
 }
 
 body{
@@ -25,7 +32,7 @@ body{
 h1{
     font-size: 3rem;
     margin: 0 0 15px 0;
-    background: rgb(227, 82, 188);
+    background: var(--font-featured);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
@@ -61,9 +68,8 @@ h1{
     top: 47px;
     left: 50%;
     transform: translateX(-30%);
-    background: transparent;
     border: 0;
-    width: 100px;
+    font-weight: bold;
 }
 .dateTodo{
     position: absolute;
@@ -71,18 +77,13 @@ h1{
     left: 50%;
     font-size: 11px;
     transform: translateX(-50%);
+    font-weight: bold;
 }
 ::-webkit-datetime-edit { padding: 0; }
 ::-webkit-datetime-edit-fields-wrapper { background: transparent; }
 ::-webkit-datetime-edit-text { padding: 0; }
 ::-webkit-inner-spin-button { display: none;}
-::-webkit-calendar-picker-indicator {
-    margin: 0 0 0 -50px;
-    display: block;
-    padding: 5px;
-    cursor:pointer;
-    background: transparent;
-}
+::-webkit-calendar-picker-indicator { margin: 0 0 0 -33px ;display: block; padding: 5px; cursor: pointer; background: transparent; }
 
 input[type="color"]::-webkit-color-swatch-wrapper {
     padding: 0;
@@ -129,7 +130,7 @@ input[type="color"]::-webkit-color-swatch {
     cursor: pointer;
 }
 .fa-trash:hover{
-    color: red;;
+    color: var(--trash);;
 }
 .fa-check-circle, .fa-circle {
     font-size: 25px;
@@ -138,14 +139,14 @@ input[type="color"]::-webkit-color-swatch {
     margin: 0 0 0 10px;
 }
 .fa-circle:hover{
-    color: rgb(255,182,193);
+    color: var(--done);
 }
 .fa-check-circle{
-    color: rgb(255,182,193);
+    color: var(--done);
 }
 .lineThrough{
     text-decoration: line-through;
-    color: rgb(255,182,193);
+    color: var(--done);
     font-weight: normal;
 }
 .text{
@@ -156,6 +157,7 @@ input[type="color"]::-webkit-color-swatch {
     top: 17px;
     transform: translateX(-50%);
     font-weight: bold;
+    width: max-content;
 }
 .todoColorLeft, .todoColorRight{
     position: absolute;
@@ -174,27 +176,32 @@ input[type="color"]::-webkit-color-swatch {
     position: absolute;
     right: 0;
     top: 50%;
-    background: rgb(227, 82, 188);
+    background: var(--font-featured);
     padding: 7px;
     font-size: 20px;
     transition: 0.2s;
 }
 .link a{
     text-decoration: none;
-    color: white;
+    color: var(--font);
 }
-.clock,
-.date {
-    color: white;
-    font-size: 33px;
-    top: 10px;
+.clock, .date{
     position: absolute;
+    top: 10px;
+    font-size: 55px;
+    color: var(--font);
 }
-
-.clock {
+.clock{
     left: 10px;
 }
-
-.date {
+.date{
     right: 10px;
+}
+@media only screen and (max-width: 1400px), (max-height: 845px) {
+    .logo{
+        font-size: 45px
+    }
+    .date, .clock{
+        font-size: 30px;
+    }
 }

@@ -34,30 +34,3 @@ function main() {
     document.getElementById("date").innerHTML = `${day} ${month} ${year}`
     setTimeout("main()", 1000);
 }
-main()
-
-$(document).ready(function(){
-    //You might want to do if check to see if localstorage set for theImage here
-    let img = new Image();
-    img.src = localStorage.theImage;
-
-    $('.wallpaper').html(img);
-
-    $("body").on("change",".options__button",function(){
-        //Equivalent of getElementById
-        let fileInput = $(this)[0];//returns a HTML DOM object by putting the [0] since it's really an associative array.
-        let file = fileInput.files[0]; //there is only '1' file since they are not multiple type.
-
-        let reader = new FileReader();
-        reader.onload = function(e) {
-             // Create a new image.
-            let img = new Image();
-
-            img.src = reader.result;
-             localStorage.theImage = reader.result; //stores the image to localStorage
-            $(".wallpaper").html(img);
-        }
-
-        reader.readAsDataURL(file);//attempts to read the file in question.
-    });
-});

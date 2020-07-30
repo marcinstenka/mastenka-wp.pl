@@ -65,11 +65,13 @@ h1{
 }
 .datePicker{
     position: absolute;
-    top: 47px;
+    top: 48px;
     left: 50%;
-    transform: translateX(-30%);
+    transform: translateX(-50%);
     border: 0;
     font-weight: bold;
+    width: 79px;
+    height: 14px;
 }
 .dateTodo{
     position: absolute;

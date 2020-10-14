@@ -64,10 +64,7 @@ h1{
     -webkit-appearance: none
 }
 .datePicker{
-    position: absolute;
-    top: 47px;
-    left: 50%;
-    transform: translateX(-30%);
+    transform: translate(185px, -26px);
     border: 0;
     font-weight: bold;
 }

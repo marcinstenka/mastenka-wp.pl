@@ -118,7 +118,7 @@ datePicker.addEventListener("change", function(e){
                         color: todoColor,
                         date: date
                     })
-                    //add item to local storage (this must be everywhere where todoList is uptdated)
+                    //add item to local storage (this must be everywhere where todoList is updated)
                     localStorage.setItem('TODO', JSON.stringify(todoList));
                     id++;
                 }

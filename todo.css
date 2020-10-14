@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+:root {
+    --bg: #272626;
+    --font: #ffffff;
+    --font-featured: #EFA73A;
+    --done: green;
+    --trash: red;
+}
+input:focus{
+    outline: none;
+}
+::selection{
+    background: #272626;
+    color: var(--font);
+}
+
+body{
+    background: #272626;
+}
+.todoApp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 460px;
+    margin: 50px auto 0 auto;
+}
+h1{
+    font-size: 3rem;
+    margin: 0 0 15px 0;
+    background: var(--font-featured);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+
+}
+.input{
+    width: 100%;
+    font-size: 30px;
+    padding: 15px 15px 15px 25px;
+    border: none;
+}
+.inputs{
+    position: relative;
+    width: 100%;
+    max-width: 452px;
+    min-width: 200px;
+    overflow: hidden;
+    height: 63px;
+    border-radius: 40px;
+}
+.colorPicker{
+    position: absolute;
+    right: -169px;
+    border: none;
+    top: -5px;
+    width: 200px;
+    height: 86px;
+    cursor: pointer;
+    -webkit-appearance: none
+}
+.datePicker{
+    position: absolute;
+    top: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 0;
+    font-weight: bold;
+    width: 79px;
+    height: 14px;
+}
+.dateTodo{
+    position: absolute;
+    top: 49px;
+    left: 50%;
+    font-size: 11px;
+    transform: translateX(-50%);
+    font-weight: bold;
+}
+::-webkit-datetime-edit { padding: 0; }
+::-webkit-datetime-edit-fields-wrapper { background: transparent; }
+::-webkit-datetime-edit-text { padding: 0; }
+::-webkit-inner-spin-button { display: none;}
+::-webkit-calendar-picker-indicator { margin: 0 0 0 -33px ;display: block; padding: 5px; cursor: pointer; background: transparent; }
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+}
+.todos{
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.todo{
+    background: linear-gradient(to right, rgba(246,246,246,1) 0%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0 0 0;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.todo:before{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: opacity 0.2s linear;
+    opacity: 0;
+  /* background: linear-gradient(to right, rgb(133, 9, 9) 0%, rgba(254,254,254,1) 10%, rgba(254,254,254,1) 12%, rgba(246,246,246,1) 100%); */
+}
+.todo:hover::before {
+    opacity: 1;
+}
+.fa-trash{
+    font-size: 23px;
+    transition: 0.2s;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+}
+.fa-trash:hover{
+    color: var(--trash);;
+}
+.fa-check-circle, .fa-circle {
+    font-size: 25px;
+    transition: 0.2s;
+    cursor: pointer;
+    margin: 0 0 0 10px;
+}
+.fa-circle:hover{
+    color: var(--done);
+}
+.fa-check-circle{
+    color: var(--done);
+}
+.lineThrough{
+    text-decoration: line-through;
+    color: var(--done);
+    font-weight: normal;
+}
+.text{
+    font-size: 1.2rem;
+    position: absolute;
+    left: 50%;
+    transition: 0.2s;
+    top: 17px;
+    transform: translateX(-50%);
+    font-weight: bold;
+    width: max-content;
+}
+.todoColorLeft, .todoColorRight{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    width: 14px;
+    height: 68.5px;
+}
+.todoColorLeft{
+    right: 0;
+}
+.todoColorRight{
+    left: 0;
+}
+.link{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    background: var(--font-featured);
+    padding: 7px;
+    font-size: 20px;
+    transition: 0.2s;
+}
+.link a{
+    text-decoration: none;
+    color: var(--font);
+}
+.clock, .date{
+    position: absolute;
+    top: 10px;
+    font-size: 55px;
+    color: var(--font)
+}
+.clock{
+    left: 10px;
+}
+.date{
+    right: 10px;
+}
+@media only screen and (max-width: 1400px), (max-height: 845px) {
+    .logo{
+        font-size: 45px
+    }
+    .date, .clock{
+        font-size: 30px;
+    }
+}

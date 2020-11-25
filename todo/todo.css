@@ -67,6 +67,8 @@ h1{
     transform: translate(185px, -23px);
     border: 0;
     font-weight: bold;
+    background: none;
+    padding: 5px 0 0 0;
 }
 .dateTodo{
     position: absolute;
